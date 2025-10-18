@@ -1,5 +1,5 @@
 .order {
-    background: url("/img/bg-order.png") 0 0 no-repeat;
+    background: url("../img/bg-order.png") 0 0 no-repeat;
     background-size: cover;
     @include adaptiv-value('padding-top', 121, 40, 1);
     @include adaptiv-value('padding-bottom', 151, 40, 1);
@@ -15,9 +15,18 @@
         display: flex;
         justify-content: space-between;
         gap: 25px;
-        overflow: scroll;
-        @media (max-width: $md1+px)  {
-            
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: thin;
+        scrollbar-color: #3e9cdc transparent;
+        .order__steps::-webkit-scrollbar {
+            height: 5px;
+            background: transparent;
+        }
+        .order__steps::-webkit-scrollbar-thumb {
+            background: #3e9cdc;
+            border-radius: 5px;
         }
     }
 }

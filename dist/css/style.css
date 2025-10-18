@@ -438,13 +438,13 @@ body {
 .hero {
   position: relative;
   color: #000;
-  background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url("/img/hero-mainscreen-mob.jpg") right 0 no-repeat;
+  background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url("../img/hero-mainscreen-mob.jpg") right 0 no-repeat;
   background-size: cover;
   background-blend-mode: normal;
 }
 @media (min-width: 1212px) {
   .hero {
-    background: url("/img/hero-mainscreen.png") right center no-repeat;
+    background: url("../img/hero-mainscreen.png") right center no-repeat;
     background-size: cover;
   }
 }
@@ -532,7 +532,7 @@ body {
   width: 100%;
 }
 .order {
-  background: url("/img/bg-order.png") 0 0 no-repeat;
+  background: url("../img/bg-order.png") 0 0 no-repeat;
   background-size: cover;
 }
 .order {
@@ -569,8 +569,21 @@ body {
   display: flex;
   justify-content: space-between;
   gap: 25px;
-  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #3e9cdc transparent;
 }
+.order__steps .order__steps::-webkit-scrollbar {
+  height: 5px;
+  background: transparent;
+}
+.order__steps .order__steps::-webkit-scrollbar-thumb {
+  background: #3e9cdc;
+  border-radius: 5px;
+}
+
 .step {
   flex: 0 0 calc(20% - 25px);
   min-width: 214px;
