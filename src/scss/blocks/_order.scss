@@ -1,6 +1,6 @@
 .order {
     background: url("../img/bg-order.png") 0 0 no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     @include adaptiv-value('padding-top', 121, 40, 1);
     @include adaptiv-value('padding-bottom', 151, 40, 1);
     &__body {

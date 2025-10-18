@@ -439,13 +439,13 @@ body {
   position: relative;
   color: #000;
   background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url("../img/hero-mainscreen-mob.jpg") right 0 no-repeat;
-  background-size: cover;
+  background-size: cover !important;
   background-blend-mode: normal;
 }
 @media (min-width: 1212px) {
   .hero {
     background: url("../img/hero-mainscreen.png") right center no-repeat;
-    background-size: cover;
+    background-size: cover !important;
   }
 }
 .hero__body {
@@ -533,7 +533,7 @@ body {
 }
 .order {
   background: url("../img/bg-order.png") 0 0 no-repeat;
-  background-size: cover;
+  background-size: cover !important;
 }
 .order {
   padding-top: 121px;

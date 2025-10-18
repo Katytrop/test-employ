@@ -2,11 +2,11 @@
     position: relative;
     color: #000;
     background: linear-gradient(rgb(2 2 2 / 35%), rgb(255 255 255 / 22%)), url('../img/hero-mainscreen-mob.jpg') right 0 no-repeat;
-    background-size: cover;
+    background-size: cover !important;
     background-blend-mode: normal;
     @media (min-width: $md1+px)  {
         background: url("../img/hero-mainscreen.png") right center no-repeat;
-        background-size: cover;
+        background-size: cover !important;
     }
     &__body {
         display: flex;
