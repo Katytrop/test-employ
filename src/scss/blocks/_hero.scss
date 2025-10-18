@@ -1,0 +1,75 @@
+.hero {
+    position: relative;
+    color: #000;
+    background: linear-gradient(rgb(2 2 2 / 35%), rgb(255 255 255 / 22%)), url('/img/hero-mainscreen-mob.jpg') right 0 no-repeat;
+    background-size: cover;
+    background-blend-mode: normal;
+    @media (min-width: $md1+px)  {
+        background: url("/img/hero-mainscreen.png") right center no-repeat;
+        background-size: cover;
+    }
+    &__body {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        justify-content: center;
+        min-height: toRem(850);
+        @media (max-width: $md1+px)  {
+            min-height: 100dvh;
+            justify-content: flex-end;
+            padding-bottom: toRem(30);
+        }
+    }
+    &__title {
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        @include adaptiv-value('margin-bottom', 80, 30, 1);
+        @include adaptiv-value('font-size', 48, 24, 1);
+        span {
+            color: #3e9cdc;
+        }
+    }
+
+    &__text {
+        line-height: 150%;
+        @include adaptiv-value('margin-bottom', 80, 30, 1);
+        li {
+            display: flex;
+            align-items: center;
+            gap: toRem(10);
+            font-size: toRem(20);
+            margin-left: 10px;
+            &::before {
+                content: '';
+                width: 5px;
+                height: 1.5px;
+                background: #000; 
+            }
+            &:not(:last-child) {
+                margin-bottom: toRem(5);
+            }
+            @media (max-width: $md3+px)  {
+                font-size: toRem(16);
+            }
+        }
+    }
+
+    &__label {
+        font-weight: 700;
+        font-size: toRem(20);
+        margin-bottom: toRem(10);
+        @media (max-width: $md3+px)  {
+            font-size: toRem(18);
+        }
+    }
+
+    &__btns {
+        width: 100%;
+    }
+
+    &__btn {
+    }
+}
+
+

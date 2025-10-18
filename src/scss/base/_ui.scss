@@ -1,0 +1,83 @@
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: toRem(48);
+    width: toRem(370);
+    padding: 0 15px;
+    text-align: center;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #2a2b30;
+    border: 1px solid #6f6d7b;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: all 0.3s ease 0s;
+    @media (max-width: $md2+px)  {
+        width: 100%;
+    }
+    @media (hover: hover) {
+        &:hover {
+            box-shadow: 0px 0px 20px 0px #000;
+        }
+    }
+    &:not(:last-child) {
+        margin-right: toRem(30);
+    }
+    &--small {
+        min-height: toRem(43);
+        width: toRem(183);
+        @media (max-width: $md4+px)  {
+            width: 100%;
+            &:not(:last-child) {
+                margin-bottom: toRem(10);
+            }
+        }
+    }
+    &--blue {
+        background: $blueColor;
+        border: 1px solid #fff;
+        color: #fff;
+        @media (hover: hover) {
+            &:hover {
+                box-shadow: 0px 0px 12px 8px #fff;
+            }
+            
+        }
+    }
+
+    &--file {
+        font-weight: 600;
+        font-size: 15px;
+        color: #272733;
+        text-transform: uppercase;
+        &::before {
+            font-size: 21px; 
+            margin-right: 10px;
+        }
+    }
+}
+
+.title-block {
+    text-align: center;
+    span {
+        color: $blueColor;
+    }
+    &__title {
+        font-weight: 700;
+        font-size: 36px;
+        text-transform: uppercase;
+        color: #fff;
+        line-height: 120%;
+        margin-bottom: toRem(30);
+        @media (max-width: $md3+px)  {
+            margin-bottom: toRem(10);
+        }
+    }
+    &__label {
+        font-size: 18px;
+        color: #bbb;
+        line-height: 133%;
+    }
+
+}
