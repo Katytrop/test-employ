@@ -394,7 +394,7 @@ body {
 .hero {
   position: relative;
   color: #000;
-  background-size: cover;
+  background-size: cover !important;
   background-blend-mode: normal;
 }
 
@@ -478,7 +478,7 @@ body {
   background: url("../img/bg-order.png") 0 0 no-repeat; }
 
 .order {
-  background-size: cover;
+  background-size: cover !important;
 }
 
 .order {
@@ -925,7 +925,7 @@ body {
   .no-webp .hero {
     background: url("../img/hero-mainscreen.png") right center no-repeat; }
   .hero {
-    background-size: cover;
+    background-size: cover !important;
   }
 
   .footer__item:not(:last-child) {
