@@ -388,8 +388,8 @@ body {
 }
 
 .no-webp .hero {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 2, 0.35)), to(rgba(255, 255, 255, 0.22))), url("/img/hero-mainscreen-mob.jpg") right 0 no-repeat;
-  background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url("/img/hero-mainscreen-mob.jpg") right 0 no-repeat; }
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 2, 0.35)), to(rgba(255, 255, 255, 0.22))), url("../img/hero-mainscreen-mob.jpg") right 0 no-repeat;
+  background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url("../img/hero-mainscreen-mob.jpg") right 0 no-repeat; }
 
 .hero {
   position: relative;
@@ -475,7 +475,7 @@ body {
 }
 
 .no-webp .order {
-  background: url("/img/bg-order.png") 0 0 no-repeat; }
+  background: url("../img/bg-order.png") 0 0 no-repeat; }
 
 .order {
   background-size: cover;
@@ -515,7 +515,21 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 25px;
-  overflow: scroll;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: #3e9cdc transparent;
+}
+
+.order__steps .order__steps::-webkit-scrollbar {
+  height: 5px;
+  background: transparent;
+}
+
+.order__steps .order__steps::-webkit-scrollbar-thumb {
+  background: #3e9cdc;
+  border-radius: 5px;
 }
 
 .step {
@@ -909,7 +923,7 @@ body {
 
 @media (min-width: 1212px) {
   .no-webp .hero {
-    background: url("/img/hero-mainscreen.png") right center no-repeat; }
+    background: url("../img/hero-mainscreen.png") right center no-repeat; }
   .hero {
     background-size: cover;
   }
@@ -1217,11 +1231,11 @@ body {
   }
 }
 
-.webp .hero { background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 2, 0.35)), to(rgba(255, 255, 255, 0.22))), url(/img/hero-mainscreen-mob.webp) right 0 no-repeat; background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url(/img/hero-mainscreen-mob.webp) right 0 no-repeat; }
+.webp .hero { background: -webkit-gradient(linear, left top, left bottom, from(rgba(2, 2, 2, 0.35)), to(rgba(255, 255, 255, 0.22))), url(../img/hero-mainscreen-mob.webp) right 0 no-repeat; background: linear-gradient(rgba(2, 2, 2, 0.35), rgba(255, 255, 255, 0.22)), url(../img/hero-mainscreen-mob.webp) right 0 no-repeat; }
 
-.webp .order { background: url(/img/bg-order.webp) 0 0 no-repeat; }
+.webp .order { background: url(../img/bg-order.webp) 0 0 no-repeat; }
 
 @media (min-width: 1212px) {
 
-  .webp .hero { background: url(/img/hero-mainscreen.webp) right center no-repeat; }
+  .webp .hero { background: url(../img/hero-mainscreen.webp) right center no-repeat; }
 }
