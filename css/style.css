@@ -240,17 +240,44 @@ h6 {
 
 .title-block__title {
   font-weight: 700;
-  font-size: 36px;
   text-transform: uppercase;
   color: #fff;
   line-height: 120%;
   margin-bottom: 1.875rem;
 }
 
+.title-block__title {
+  font-size: 36px;
+}
+
 .title-block__label {
   font-size: 18px;
   color: #bbb;
   line-height: 133%;
+}
+
+.js-animate,
+.js-animate-scroll {
+  opacity: 0;
+  -webkit-transform: translateY(40px);
+      -ms-transform: translateY(40px);
+          transform: translateY(40px);
+  -webkit-filter: blur(10px);
+          filter: blur(10px);
+  -webkit-transition: opacity 1s, -webkit-transform 1.2s, -webkit-filter 1s;
+  transition: opacity 1s, -webkit-transform 1.2s, -webkit-filter 1s;
+  transition: opacity 1s, transform 1.2s, filter 1s;
+  transition: opacity 1s, transform 1.2s, filter 1s, -webkit-transform 1.2s, -webkit-filter 1s;
+}
+
+.js-animate.visible,
+.js-animate-scroll.visible {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-filter: blur(0);
+          filter: blur(0);
 }
 
 body {
@@ -978,6 +1005,10 @@ body {
 }
 
 @media (max-width: 1200px) {
+  .title-block__title {
+    font-size: calc(28px + 8 * (100vw - 320px) / 880);
+  }
+
   .hero__title {
     margin-bottom: calc(30px + 50 * (100vw - 320px) / 880);
   }
