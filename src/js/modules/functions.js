@@ -34,3 +34,24 @@ range.addEventListener('input', () => {
   percent.textContent = `${range.value} %`;
 });
 
+//анимация
+document.addEventListener('DOMContentLoaded', () => {
+  const elements = document.querySelectorAll('.hero__body .js-animate');
+  elements.forEach((el, i) => {
+    setTimeout(() => el.classList.add('visible'), 500 * i);
+  });
+});
+
+const observer = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      obs.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('.js-animate-scroll').forEach((el, i) => {
+  el.style.transitionDelay = `${i * 400}ms`; 
+  observer.observe(el);
+});

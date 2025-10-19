@@ -248,11 +248,18 @@ h6 {
 }
 .title-block__title {
   font-weight: 700;
-  font-size: 36px;
   text-transform: uppercase;
   color: #fff;
   line-height: 120%;
   margin-bottom: 1.875rem;
+}
+.title-block__title {
+  font-size: 36px;
+}
+@media (max-width: 1200px) {
+  .title-block__title {
+    font-size: calc(28px + 8 * (100vw - 320px) / 880);
+  }
 }
 @media (max-width: 767.98px) {
   .title-block__title {
@@ -263,6 +270,18 @@ h6 {
   font-size: 18px;
   color: #bbb;
   line-height: 133%;
+}
+
+.js-animate, .js-animate-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  filter: blur(10px);
+  transition: opacity 1s, transform 1.2s, filter 1s;
+}
+.js-animate.visible, .js-animate-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
 }
 
 body {
